@@ -60,7 +60,7 @@ $mediumGutter: map-get($grid-margin-gutters, "medium");
 // Layout components
 @include foundation-off-canvas;
 // @include foundation-reveal;
-// @include foundation-sticky;
+@include foundation-sticky;
 //@include foundation-title-bar;
 @include foundation-top-bar;
 
@@ -80,6 +80,7 @@ $mediumGutter: map-get($grid-margin-gutters, "medium");
 # Custom Styles
 --------------------------------------------------------------*/
 @import "global";
+@import "helpers";
 @import "typography";
 @import "header";
 @import "footer";

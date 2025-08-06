@@ -16,6 +16,11 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
+	
+	<link rel="icon" type="image/png" href="<?=get_template_directory_uri();?>/assets/images/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/svg+xml" href="<?=get_template_directory_uri();?>/assets/images//favicon.svg" />
+	<link rel="shortcut icon" href="<?=get_template_directory_uri();?>/assets/images//favicon.ico" />
+	<link rel="apple-touch-icon" sizes="180x180" href="<?=get_template_directory_uri();?>/assets/images//apple-touch-icon.png" />
 
 	<?php wp_head(); ?>
 </head>

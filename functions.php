@@ -171,31 +171,16 @@ add_action( 'wp_enqueue_scripts', 'trailhead_scripts' );
 
 
 /**
- * Enqueue Google Fonts.
+ * Enqueue Adobe Fonts.
  */
-wp_enqueue_style(
-	 'pmi-google-fonts',
-	 'https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Roboto:ital@0;1&display=swap',
-	 array(),
-	 null
- );
- 
- function google_font_loader_tag_filter( $html, $handle ) {
-	 if ( $handle === 'pmi-google-fonts' ) {
-		 $rel_preconnect = "rel='stylesheet preconnect'";
-		 return str_replace(
-			 "rel='stylesheet'",
-			 $rel_preconnect,
-			 $html
-		 );
-	 }
-	 return $html;
+function enqueue_typekit_font() {
+	 wp_enqueue_style( 'adobe-typekit', 'https://use.typekit.net/eyn2fyu.css', array(), null );
  }
- add_filter( 'style_loader_tag', 'google_font_loader_tag_filter', 10, 2 );
+ add_action( 'wp_enqueue_scripts', 'enqueue_typekit_font' );
 
 
 // Disable Tabelpress Stylesheet
-add_filter( 'tablepress_use_default_css', '__return_false' );
+// add_filter( 'tablepress_use_default_css', '__return_false' );
 
 
 /**
