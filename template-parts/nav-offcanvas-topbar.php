@@ -4,6 +4,7 @@
  *
  * For more info: https://jointswp.com/docs/off-canvas-menu/
  */
+$logo = get_field('header_logo', 'option');
 ?>
 
 <div class="top-bar-wrap grid-container fluid">
@@ -32,11 +33,9 @@
 		
 			<ul class="menu">
 				<li class="logo"><a href="<?php echo home_url(); ?>">
-					<?php 
-					$image = get_field('header_logo', 'option');
-					if( !empty( $image ) ): ?>
-					    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-					<?php endif; ?>
+					<?php if( !empty( $logo ) ) {
+						echo wp_get_attachment_image( $logo['id'], 'full' );
+					}?>
 				</a></li>
 			</ul>
 						

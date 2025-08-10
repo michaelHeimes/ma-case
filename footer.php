@@ -8,47 +8,75 @@
  *
  * @package trailhead
  */
-
+$logo = get_field('footer_logo', 'option') ?? null;
+$global_contact_info = get_field('global_contact_info', 'option') ?? null;
+$footer_disclaimer_left = get_field('footer_disclaimer_left', 'option') ?? null;
+$footer_disclaimer_right = get_field('footer_disclaimer_right', 'option') ?? null;
 ?>
 
-				<footer id="colophon" class="site-footer">
+				<footer id="colophon" class="site-footer bg-light-green">
 					<div class="site-info">
 						<div class="grid-container">
 							<div class="grid-x grid-padding-x">
-								<div class="cell small-12">
-									<?php 
-									$image = get_field('footer_logo', 'option');
-									if( !empty( $image ) ): ?>
-									<div class="top">
-										<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-									</div>
-									<?php endif; ?>
-									<?php 
-									$link = get_field('parent_company_link', 'option');
-									if( $link ): 
-										$link_url = $link['url'];
-										$link_title = $link['title'];
-										$link_target = $link['target'] ? $link['target'] : '_self';
-										?>
-									<div class="bottom">
-										<a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
-									</div>
-									<?php endif; ?>	
-									<a href="<?php echo esc_url( __( 'https://wordpress.org/', '_s' ) ); ?>">
-										<?php
-										/* translators: %s: CMS name, i.e. WordPress. */
-										printf( esc_html__( 'Proudly powered by %s', '_s' ), 'WordPress' );
-										?>
-									</a>
-									<span class="sep"> | </span>
-										<?php
-										/* translators: 1: Theme name, 2: Theme author. */
-										printf( esc_html__( 'Theme: %1$s by %2$s.', '_s' ), '_s', '<a href="https://automattic.com/">Automattic</a>' );
-										?>
+								<div class="cell small-12 medium-3">
+									<?php if( !empty( $logo ) ) {
+										echo wp_get_attachment_image( $logo['id'], 'full' );
+									}?>
 								</div>
+								<?php if($global_contact_info):
+									$office_phone = $global_contact_info['office_phone'] ?? null;
+									$address = $global_contact_info['address'] ?? null;
+									$email = $global_contact_info['email'] ?? null;	
+								?>
+									<div class="cell small-12 medium-3">
+										<h5>Contact Information</h5>
+										<?php if($office_phone):?>
+											<div>
+												Office: <a class="color-black" href="tel:<?=esc_attr($office_phone);?>"><?=esc_attr($office_phone);?></a>
+											</div>
+										<?php endif;?>
+										<?php if($address):?>
+											<div class="address">
+												<?=wp_kses_post( $address );?>
+											</div>
+										<?php endif;?>
+										<?php if($email):?>
+											<div>
+												<a class="color-black" href="mailto:<?=esc_attr($email);?>"><?=esc_attr($email);?></a>
+											</div>
+										<?php endif;?>
+									</div>
+								<?php endif;?>
+								<?php if ( ! empty( trailhead_footer_links() ) ):?>
+									<div class="footer-links-wrap small-12 medium-6">
+										<h5>Links</h5>
+										<?php trailhead_footer_links();?>
+									</div>
+								<?php endif;?>
 							</div>
 						</div>
 					</div><!-- .site-info -->
+					
+					<?php if($footer_disclaimer_left || $footer_disclaimer_right ):?>
+						<div class="disclaimer bg-charcoal color-white">
+							<div class="grid-container">
+								<div class="grid-x grid-padding-x">
+									<?php if($footer_disclaimer_left):?>
+										<div class="cell small-12 medium-6">
+											<?=wp_kses_post($footer_disclaimer_left);?>
+										</div>
+									<?php endif;?>
+									<?php if($footer_disclaimer_right):?>
+										<div class="cell small-12 medium-6">
+											<?=wp_kses_post($footer_disclaimer_right);?>
+										</div>
+									<?php endif;?>
+								</div>
+							</div>
+						</div>
+					<?php endif;?>
+					
+					
 				</footer><!-- #colophon -->
 					
 			</div><!-- #page -->

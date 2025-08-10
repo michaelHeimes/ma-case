@@ -10,6 +10,19 @@ h5,
 .h5,
 p,
 ul,
-ol {
+ol,
+.button {
 	letter-spacing: -.01em;
+}
+
+h1,
+.h1 {
+	line-height: 1;
+}
+
+p,
+ul,
+ol,
+.button {
+	font-size: rem-calc(20);
 }
