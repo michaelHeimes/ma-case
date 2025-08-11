@@ -8,7 +8,7 @@ if( $heading || $copy || $cta_link || $image ):
 ?>
 <section class="module copy-cta-left-img-right">
 	<div class="grid-container">
-		<div class="bg-light-green">
+		<div class="inner relative bg-light-green">
 			<div class="grid-x grid-padding-x align-bottom tablet-flex-dir-row-reverse">
 				<?php if($image):?>
 					<div class="cell small-12 medium-8 tablet-6">
@@ -37,6 +37,8 @@ if( $heading || $copy || $cta_link || $image ):
 					<?php endif;?>
 				</div>
 			</div>
+			<div class="square top-left-square bg-light-green"></div>
+			<div class="square bottom-right-square bg-black"></div>
 		</div>
 	</div>
 </section>

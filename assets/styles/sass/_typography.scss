@@ -17,12 +17,12 @@ ol,
 
 h1,
 .h1 {
+	font-size: clamp(3.063rem, 2.436rem + 2.675vw, 4.375rem);
 	line-height: 1;
 }
 
 p,
 ul,
-ol,
-.button {
-	font-size: rem-calc(20);
+ol {
+	font-size: clamp(1.063rem, 0.973rem + 0.382vw, 1.25rem);
 }

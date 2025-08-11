@@ -1,4 +1,22 @@
 .page-banner {
+	&.hero-title {
+		.grid-x {
+			padding-top: clamp(4.287rem, 3.41rem + 3.745vw, 6.125rem);
+			padding-bottom: clamp(4.287rem, 3.41rem + 3.745vw, 6.125rem);
+			min-height: clamp(26.25rem, 20.876rem + 22.93vw, 37.5rem);
+			h1 {
+				display: inline-block;
+				background-color: rgba($black, .4);
+				padding: .04em .29em;
+				margin-bottom: .24em;
+				margin-left: -9px;
+				margin-right: -9px;
+			}
+		}
+		& + section.module {
+			margin-top: 50px;
+		}
+	}
 	&.image-link {
 		.img-wrap {
 			padding-top: 13.889%;

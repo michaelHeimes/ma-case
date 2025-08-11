@@ -1,0 +1,42 @@
+.copy-cta-left-img-right {
+	.inner {
+		padding: clamp(1.75rem, 1.392rem + 1.529vw, 2.5rem);
+		.square {
+			display: block;
+			position: absolute;
+			border: clamp(0.438rem, 0.348rem + 0.382vw, 0.625rem) solid $white;
+			&.top-left-square {
+				transform: translate(-50%, -50%);
+				top: 0;
+				left: 0;
+				width: clamp(3.063rem, 2.436rem + 2.675vw, 4.375rem);
+				height: clamp(3.063rem, 2.436rem + 2.675vw, 4.375rem);
+			}
+			&.bottom-right-square {
+				transform: translate(20px, 20px);
+				bottom: 0;
+				right: 0;
+				width: clamp(4.375rem, 3.479rem + 3.822vw, 6.25rem);
+				height: clamp(4.375rem, 3.479rem + 3.822vw, 6.25rem);
+			}
+		}
+		&:after {
+
+
+		}
+		> .grid-x {
+			> .cell {
+				@include breakpoint(medium) {
+					&:first-child{
+						padding-right: 0;
+					}
+				}
+				@include breakpoint(medium) {
+					&:last-child{
+						padding-left: 0;
+					}
+				}
+			}
+		}
+	}
+}

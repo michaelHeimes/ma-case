@@ -88,5 +88,6 @@ $mediumGutter: map-get($grid-margin-gutters, "medium");
 // @import "_parts/banner";
 
 @import "_modules/page-banner";
-
-@import "_pages/home";
+@import "_modules/outlined-centered-logo-title-copy";
+@import "_modules/outlined-title-cards";
+@import "_modules/copy-cta-left-img-right";

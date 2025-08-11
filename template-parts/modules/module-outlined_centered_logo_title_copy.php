@@ -15,14 +15,18 @@ if( $logo || $title || $copy ):
 							<?=wp_get_attachment_image( $logo['id'], 'full' );?>
 						</div>
 					<?php endif;?>
-					<?php if($title):?>
-						<div class="title-wrap">
-							<?=wp_kses_post($title);?>
-						</div>
-					<?php endif;?>
-					<?php if($copy):?>
-						<div class="copy-wrap">
-							<?=wp_kses_post($copy);?>
+					<?php if($title || $copy):?>
+						<div class="text-copy-wrap">
+							<?php if($title):?>
+								<div class="title-wrap">
+									<?=wp_kses_post($title);?>
+								</div>
+							<?php endif;?>
+							<?php if($copy):?>
+								<div class="copy-wrap">
+									<?=wp_kses_post($copy);?>
+								</div>
+							<?php endif;?>
 						</div>
 					<?php endif;?>
 				</div>

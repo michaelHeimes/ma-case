@@ -1,0 +1,30 @@
+.outlined-title-cards {
+	.grid-container:not(.full) {
+		.grid-x {
+			gap: clamp(1.875rem, 0.382rem + 6.369vw, 5rem);
+			> .cell {
+				width: auto;
+				flex: 0 0 100%;
+				@include breakpoint(medium) {
+					flex: 0 1 calc(50% - clamp(1.875rem, 0.382rem + 6.369vw, 5rem));
+				}
+				@include breakpoint(large) {
+					flex: 1;
+				}
+			}
+		}
+	}
+	.inner {
+		padding: clamp(1.75rem, 1.392rem + 1.529vw, 2.5rem) clamp(1.25rem, 1.011rem + 1.019vw, 1.75rem);
+		&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: clamp(0.875rem, 0.696rem + 0.764vw, 1.25rem);
+			height: clamp(0.875rem, 0.696rem + 0.764vw, 1.25rem);
+			background-color: $color-lite-green;
+		}
+	}
+}

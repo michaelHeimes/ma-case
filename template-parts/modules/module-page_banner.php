@@ -38,7 +38,7 @@ if( $hero_image_title_cta_link || $image_cta_link ):
 		</div>
 	<?php endif;?>
 	<div class="grid-container relative">
-		<div class="grid-x">
+		<div class="grid-x align-bottom">
 			<div class="cell small-12">
 				<?php if($title):?>
 					<div class="title-wrap">

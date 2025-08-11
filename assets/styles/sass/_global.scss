@@ -56,7 +56,14 @@ svg {
 }
 
 .button {
-	font-size: rem-calc(24);
+	min-width: clamp(10.5rem, 8.35rem + 9.172vw, 15rem);
+	font-size: clamp(1.125rem, 0.946rem + 0.764vw, 1.5rem);
+	border-top-right-radius: clamp(0.875rem, 0.696rem + 0.764vw, 1.25rem);
+}
+
+.module:not(.page-banner) {
+	margin-top: clamp(3.938rem, 3.131rem + 3.439vw, 5.625rem);
+	margin-bottom: clamp(3.938rem, 3.131rem + 3.439vw, 5.625rem);
 }
 
 .green-outline {

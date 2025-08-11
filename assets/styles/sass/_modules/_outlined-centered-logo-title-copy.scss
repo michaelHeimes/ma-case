@@ -1,0 +1,16 @@
+.outlined-centered-logo-title-copy {
+	padding-top: 30px;
+	.logo-wrap {
+		display: inline-block;
+		background-color: $white;
+		padding: 0 1rem;
+		transform: translateY(-50%);
+		height: 60px;
+	}
+	.text-copy-wrap {
+		padding: 1rem clamp(1.75rem, 1.392rem + 1.529vw, 2.5rem) clamp(1.969rem, 1.566rem + 1.72vw, 2.813rem);
+		.title-wrap {
+			padding-bottom: clamp(2.188rem, 1.74rem + 1.911vw, 3.125rem);
+		}
+	}
+}
