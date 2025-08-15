@@ -1,0 +1,30 @@
+.module.service-rows {
+	.service-row {
+		margin-bottom: clamp(1.75rem, 1.392rem + 1.529vw, 2.5rem);
+		.green-outline {
+			padding: clamp(2.188rem, 1.74rem + 1.911vw, 3.125rem);
+		}
+	}
+	.square {
+		position: absolute;
+		&.bg-light-green {
+			width: clamp(2.188rem, 1.74rem + 1.911vw, 3.125rem);
+			height: clamp(2.188rem, 1.74rem + 1.911vw, 3.125rem);
+			top: -10px;
+			left: -10px;
+		}
+		&.bg-light-green-3 {
+			width: clamp(1.75rem, 1.392rem + 1.529vw, 2.5rem);
+			height: clamp(1.75rem, 1.392rem + 1.529vw, 2.5rem);
+			right: 0;
+			bottom: 0;
+		}
+	}
+	h3 {
+		line-height: 1.666;
+		margin-bottom: 1em;
+		@breakpoint( medium ) {
+			margin-bottom: 0;
+		}
+	}
+}

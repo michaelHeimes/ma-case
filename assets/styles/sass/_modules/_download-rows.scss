@@ -1,0 +1,12 @@
+.module.download-rows {
+	.download-row {
+		margin-bottom: clamp(1.75rem, 1.392rem + 1.529vw, 2.5rem);
+	}
+	h3 {
+		line-height: 1.666;
+		margin-bottom: 1em;
+		@breakpoint( medium ) {
+			margin-bottom: 0;
+		}
+	}
+}

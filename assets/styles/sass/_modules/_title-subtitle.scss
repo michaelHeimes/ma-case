@@ -1,4 +1,6 @@
-.title-subtitle {
+.module.title-subtitle {
+	padding-top: rem-calc(15);
+	padding-bottom: rem-calc(22);
 	& + .module {
 		margin-top: 0 !important;
 	}

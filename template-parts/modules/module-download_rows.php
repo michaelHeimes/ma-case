@@ -6,12 +6,12 @@ if( $download_rows ):
 <section class="module download-rows">
 	<div class="grid-container">
 		<div class="grid-x align-center">
-			<div class="cell small-12 tablet-10">
+			<div class="cell small-12 tablet-11 large-10">
 				<?php foreach($download_rows as $download_row):
 					$resource_link = $download_row['resource_link'] ?? null;
 					$description = $download_row['description'] ?? null;
 				?>
-					<div class="grid-x grid-padding-x">
+					<div class="download-row grid-x grid-padding-x">
 						<?php if($resource_link):
 							$link_url = $resource_link['url'];
 							$link_title = $resource_link['title'];

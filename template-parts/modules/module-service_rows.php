@@ -9,18 +9,26 @@ if( $service_rows ):
 			$text = $service_row['text'] ?? null;
 			if($title || $text):
 		?>	
-			<div class="service-row green-outline">
-				<div class="grid-x grid-padding-x">
-					<?php if( $title ):?>
-						<div class="cell small-12 medium-5">
-							<h3 class="color-black"><?=wp_kses_post($title);?></h3>
+			<div class="service-row">
+				<div class="grid-x align-center">
+					<div class="cell small-12 tablet-11 large-10">
+						<div class="green-outline relative">
+							<div class="grid-x grid-padding-x">
+								<?php if( $title ):?>
+									<div class="cell small-12 medium-5 tablet-5">
+										<h3 class="color-black"><?=wp_kses_post($title);?></h3>
+									</div>
+								<?php endif;?>
+								<?php if( $text ):?>
+									<div class="cell small-12 medium-7">
+										<p><b><?=wp_kses_post($text);?></b></p>
+									</div>
+								<?php endif;?>
+								<div class="square bg-light-green"></div>
+								<div class="square bg-light-green-3"></div>
+							</div>
 						</div>
-					<?php endif;?>
-					<?php if( $text ):?>
-						<div class="cell small-12 medium-7">
-							<?=wp_kses_post($text);?>
-						</div>
-					<?php endif;?>
+					</div>
 				</div>
 			</div>
 		<?php endif; endforeach;?>

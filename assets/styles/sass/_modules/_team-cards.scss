@@ -1,0 +1,27 @@
+.module.team-cards {
+	.card-grid {
+		row-gap: $smallGutter;
+		@include breakpoint(medium) {
+			row-gap: $mediumGutter;
+		}
+		@include breakpoint(xlarge) {
+			row-gap: $xLargeGutter;
+		}
+	}
+	.t-card {
+		.img-wrap {
+			margin-bottom: clamp(1.356rem, 1.079rem + 1.185vw, 1.938rem);
+		}
+		a {
+			text-decoration-thickness: 0;
+			text-underline-offset: .5px;
+			transition: text-decoration-thickness .25s ease, text-underline-offset .25s ease;
+			&:hover,
+			&:focus {
+				text-decoration: underline;
+				text-decoration-thickness: .75px;
+				text-underline-offset: 2px;
+			}	
+		}
+	}
+}

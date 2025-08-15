@@ -888,7 +888,8 @@ $grid-container: $global-width;
 $grid-columns: 12;
 $grid-margin-gutters: (
   "small": 30px,
-  "medium": 40px
+  "medium": 40px,
+  "xlarge": 60px,
 );
 $grid-padding-gutters: $grid-margin-gutters;
 $grid-container-padding: $grid-padding-gutters;

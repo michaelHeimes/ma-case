@@ -4,6 +4,11 @@ footer#colophon {
 		padding-bottom: clamp(2.1rem, 1.73rem + 1.58vw, 2.875rem);
 		.footer-col {
 			padding-bottom: clamp(2.1rem, 1.73rem + 1.58vw, 2.875rem);
+			&.text-center {
+				@include breakpoint(medium) {
+					text-align: left;
+				}
+			}
 		}
 	}
 	.left {
@@ -18,6 +23,12 @@ footer#colophon {
 		display: block;
 		columns: 2;
 		column-gap: 2rem;
+		@include breakpoint(medium) {
+			columns: 1;
+		}
+		@include breakpoint(tablet) {
+			columns: 2;
+		}
 		li {
 			margin-bottom: .26em;
 			break-inside: avoid;
