@@ -7881,7 +7881,7 @@ svg {
   border-top-right-radius: clamp(0.875rem, 0.696rem + 0.764vw, 1.25rem);
 }
 
-.module:not(.page-banner) {
+.module:not(.page-banner):not(.title-subtitle) {
   margin-top: clamp(3.938rem, 3.131rem + 3.439vw, 5.625rem);
   margin-bottom: clamp(3.938rem, 3.131rem + 3.439vw, 5.625rem);
 }
@@ -8436,6 +8436,7 @@ h1,
   line-height: 1;
 }
 
+.p, footer#colophon ul#footer-links li a,
 p,
 ul,
 ol {
@@ -8534,34 +8535,47 @@ header.site-header #top-bar-menu .menu-toggle-wrap a#menu-toggle.clicked span:nt
           transform: translate(0px, -12px) rotate(45deg);
 }
 
+footer#colophon {
+  padding-top: clamp(3.5rem, 2.783rem + 3.057vw, 5rem);
+}
+footer#colophon .site-info {
+  padding-bottom: clamp(2.1rem, 1.73rem + 1.58vw, 2.875rem);
+}
+footer#colophon .site-info .footer-col {
+  padding-bottom: clamp(2.1rem, 1.73rem + 1.58vw, 2.875rem);
+}
 @media print, screen and (max-width: 56.24875em) {
   footer#colophon .left .bottom {
     padding-bottom: 4.1rem;
   }
 }
-@media print, screen and (max-width: 56.24875em) {
-  footer#colophon ul#footer-links {
-    padding-bottom: 4.08rem;
-  }
+footer#colophon ul#footer-links {
+  display: block;
+  -webkit-columns: 2;
+     -moz-columns: 2;
+          columns: 2;
+  -webkit-column-gap: 2rem;
+     -moz-column-gap: 2rem;
+          column-gap: 2rem;
+}
+footer#colophon ul#footer-links li {
+  margin-bottom: 0.26em;
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  -moz-column-break-inside: avoid;
 }
 footer#colophon ul#footer-links li a {
-  font-size: 0.875rem;
-  line-height: 1.1875rem;
-  font-weight: bold;
-  text-transform: uppercase;
+  color: #58585A;
+  text-decoration: underline;
+  text-decoration-thickness: 0.75px;
+  text-underline-offset: 2px;
 }
-footer#colophon .copyright {
-  margin-bottom: 0;
+footer#colophon .disclaimer {
+  padding-top: clamp(1.488rem, 1.183rem + 1.299vw, 2.125rem);
+  padding-bottom: clamp(2.8rem, 2.227rem + 2.446vw, 4rem);
 }
-@media print, screen and (max-width: 56.24875em) {
-  footer#colophon .copyright {
-    text-align: center;
-  }
-}
-@media print, screen and (min-width: 56.25em) {
-  footer#colophon .copyright br {
-    display: none;
-  }
+footer#colophon .disclaimer p {
+  font-size: 1rem;
 }
 
 .page-banner.hero-title .grid-x {
@@ -8673,5 +8687,9 @@ footer#colophon .copyright {
   .copy-cta-left-img-right .inner > .grid-x > .cell:last-child {
     padding-left: 0;
   }
+}
+
+.title-subtitle + .module {
+  margin-top: 0 !important;
 }
 /*# sourceMappingURL=style.min.css.map */

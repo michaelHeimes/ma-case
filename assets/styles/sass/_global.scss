@@ -61,7 +61,7 @@ svg {
 	border-top-right-radius: clamp(0.875rem, 0.696rem + 0.764vw, 1.25rem);
 }
 
-.module:not(.page-banner) {
+.module:not(.page-banner):not(.title-subtitle) {
 	margin-top: clamp(3.938rem, 3.131rem + 3.439vw, 5.625rem);
 	margin-bottom: clamp(3.938rem, 3.131rem + 3.439vw, 5.625rem);
 }
